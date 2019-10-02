@@ -1,9 +1,0 @@
-#!/bin/sh
-for F in 102816	105923	108323	109123	111514	116726	140117	146129	156334	158136	162935	164636	169040	175237	177746	181232	185442	191033	191437	191841	192641	195041	198653	204521	205119	212318	214524	221319	233326	250427	255639	257845	283543	293748	352738	406836	559053	581450	601127	665254	680957	706040	725751	783462	814649	825048	872764	877168	898176	917255 ; do
-S=`basename $F`
-echo "Downloading $S" 
-aws s3 cp s3://hcp-openaccess/HCP_1200/${S}/MNINonLinear/Results/rfMRI_REST1_LR/rfMRI_REST1_LR_hp2000_clean.nii.gz ${S}/rfMRI_REST1_LR_hp2000_clean.nii.gz
-aws s3 cp s3://hcp-openaccess/HCP_1200/${S}/MNINonLinear/Results/rfMRI_REST1_RL/rfMRI_REST1_RL_hp2000_clean.nii.gz ${S}/rfMRI_REST1_RL_hp2000_clean.nii.gz
-aws s3 cp s3://hcp-openaccess/HCP_1200/${S}/MNINonLinear/Results/rfMRI_REST2_LR/rfMRI_REST2_LR_hp2000_clean.nii.gz ${S}/rfMRI_REST2_LR_hp2000_clean.nii.gz
-aws s3 cp s3://hcp-openaccess/HCP_1200/${S}/MNINonLinear/Results/rfMRI_REST2_RL/rfMRI_REST2_RL_hp2000_clean.nii.gz ${S}/rfMRI_REST2_RL_hp2000_clean.nii.gz
-done
